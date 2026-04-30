@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* #FEFCFB base white, #0a1128 deep navy text, #001f54 secondary navy, #1282a2 teal accent */
+    --background: 30 60% 99%;
+    --foreground: 220 68% 10%;
+
+    --card: 30 33% 98%;
+    --card-foreground: 220 68% 10%;
+
+    --popover: 30 33% 98%;
+    --popover-foreground: 220 68% 10%;
+
+    --primary: 196 80% 35%;
+    --primary-foreground: 30 60% 99%;
+
+    --secondary: 220 30% 95%;
+    --secondary-foreground: 220 68% 10%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 20% 42%;
+
+    --accent: 220 100% 20%;
+    --accent-foreground: 30 60% 99%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 60% 99%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 196 80% 35%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 30 60% 99%;
+    --sidebar-foreground: 220 68% 10%;
+    --sidebar-primary: 196 80% 35%;
+    --sidebar-primary-foreground: 30 60% 99%;
+    --sidebar-accent: 220 20% 94%;
+    --sidebar-accent-foreground: 220 68% 10%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 196 80% 35%;
+
+    --surface-elevated: 220 20% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Fira Code', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(220,100%,20%)] to-[hsl(196,80%,35%)];
+  }
+
+  .surface-card {
+    @apply border border-border bg-card rounded-lg;
+  }
+}
